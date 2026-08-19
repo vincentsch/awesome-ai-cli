@@ -73,6 +73,9 @@ documented, and scripts can read the output without scraping a screen.
 - [Google Cloud CLI (`gcloud`)](https://cloud.google.com/sdk/gcloud): Google
   Cloud projects, accounts, IAM, deploys, logs, and service-account flows. Pin
   the project and account on every run.
+- [Oracle Cloud Infrastructure CLI (`oci`)](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliusing.htm):
+  OCI resources with JSON output, JMESPath queries, JSON request files,
+  profiles, OCIDs, compartments, regions, and instance or resource principals.
 - [DigitalOcean CLI (`doctl`)](https://docs.digitalocean.com/reference/doctl/):
   Droplets, databases, Kubernetes, domains, firewalls, registries, and account
   resources with JSON output.
@@ -109,6 +112,10 @@ documented, and scripts can read the output without scraping a screen.
   compilation.
 - [Firebase CLI](https://firebase.google.com/docs/cli): Firebase deploys,
   emulators, project config, functions, Firestore indexes, and CI auth.
+- [LaunchDarkly CLI (`ldcli`)](https://launchdarkly.com/docs/home/getting-started/ldcli-commands):
+  Flags, projects, environments, members, segments, experiments, metrics,
+  JSON responses, file-based request bodies, and a local flag dev server.
+  Most mutations are immediate API writes.
 - [Laravel Forge CLI (`forge`)](https://laravel.com/forge/docs/cli): Forge
   servers, sites, deployments, environment variables, deployment logs, resource
   logs, resource status, restarts, SSH checks, and remote command execution.
@@ -155,6 +162,10 @@ documented, and scripts can read the output without scraping a screen.
   branching, deploy requests, service tokens, and safer read-only SQL defaults.
 - [Turso CLI](https://docs.turso.tech/cli): SQLite databases, branches,
   replicas, tokens, orgs, and locations from scripts.
+- [Atlas schema CLI (`atlas`)](https://atlasgo.io/cli-reference): Database
+  schema inspection, validation, diffs, linting, tests, migration plans,
+  dry-runs, SQL artifacts, and templated JSON output. This is Ariga Atlas, not
+  MongoDB Atlas.
 - [Convex CLI](https://docs.convex.dev/cli/overview): Projects, deployments,
   functions, data inspection, logs, env vars, imports, exports, and codegen.
 - [Upstash CLI](https://upstash.com/docs/agent-resources/cli): Redis, Vector,
@@ -164,6 +175,9 @@ documented, and scripts can read the output without scraping a screen.
   Bundle validation, JSON deployment plans, and replay of an approved plan.
 - [Snowflake CLI](https://docs.snowflake.com/en/developer-guide/snowflake-cli/index):
   SQL, stages, Snowpark, Streamlit apps, and object management.
+- [dbt CLI (`dbt`)](https://docs.getdbt.com/reference/dbt-commands):
+  Warehouse DAG compilation, selection, tests, builds, state comparison,
+  source freshness, docs generation, and JSON artifacts.
 - [DuckDB CLI](https://duckdb.org/docs/current/clients/cli/arguments): Local
   SQL over CSV, JSON, Parquet, SQLite, Postgres exports, and remote files.
 - [sqlite-utils](https://sqlite-utils.datasette.io/en/stable/cli.html): Import
@@ -175,6 +189,12 @@ documented, and scripts can read the output without scraping a screen.
   tables, with plugin and rate-limit caveats.
 - [Dolt](https://www.dolthub.com/docs/cli-reference/cli/): SQL data with
   Git-like branches, commits, row diffs, merges, and rollback.
+- [Algolia CLI (`algolia`)](https://www.algolia.com/doc/tools/cli/automation):
+  Applications, indices, objects, settings, synonyms, rules, JSON, JSONL,
+  NDJSON, stdin input, dry-runs, and command schemas for agents.
+- [Hugging Face CLI (`hf`)](https://huggingface.co/docs/huggingface_hub/en/guides/cli):
+  Hub repos, models, datasets, spaces, files, collections, webhooks, jobs,
+  endpoints, token overrides, JSON output, and ID-only output.
 - [dbmate](https://github.com/amacneil/dbmate): Database migrations, schema
   dumps, migration status, rollback, and checks without tying the project to
   one app framework.
@@ -201,6 +221,13 @@ documented, and scripts can read the output without scraping a screen.
 - [RabbitMQ `rabbitmqadmin`](https://www.rabbitmq.com/docs/management-cli):
   Broker inspection plus definition export and import workflows. Treat imports
   as live mutations.
+- [Confluent CLI (`confluent`)](https://docs.confluent.io/confluent-cli/current/command-reference/overview.html):
+  Confluent environments, Kafka clusters, topics, consumers, connectors,
+  schemas, Flink, API keys, audit settings, and JSON or YAML output.
+- [Temporal CLI (`temporal`)](https://docs.temporal.io/cli/common-operations):
+  Local Temporal dev server, namespaces, workflows, activities, schedules,
+  task queues, JSON output, API keys, and mTLS. Workflow mutations have no
+  preview.
 - [ntfy CLI](https://docs.ntfy.sh/subscribe/cli/): Notification publishing and
   subscription streams from shell scripts.
 
@@ -222,6 +249,9 @@ documented, and scripts can read the output without scraping a screen.
   Axiom datasets from the terminal.
 - [Tailpipe](https://tailpipe.io/docs): External logs collected into a local
   analytical store and queried with SQL.
+- [Rootly CLI (`rootly`)](https://docs.rootly.com/integrations/cli):
+  Incidents, alerts, services, teams, on-call shifts, deployment pulses,
+  filtering, pagination, API-token auth, and JSON or YAML output.
 
 ## Security, Secrets, And Supply Chain
 
@@ -264,6 +294,12 @@ documented, and scripts can read the output without scraping a screen.
 - [OpenSSF Scorecard](https://github.com/ossf/scorecard): Repository
   supply-chain checks for GitHub or local repos, with JSON output for policy
   gates.
+- [OSV-Scanner (`osv-scanner`)](https://google.github.io/osv-scanner/output/):
+  Source trees, lockfiles, SBOMs, Git data, and images scanned against OSV,
+  with JSON, SARIF, CI, and offline database workflows.
+- [CodeQL CLI (`codeql`)](https://docs.github.com/en/code-security/concepts/code-scanning/codeql/codeql-cli):
+  Code databases, standard or custom security queries, SARIF output, and
+  uploads from third-party CI. Compiled-language extraction can run builds.
 - [Checkov](https://www.checkov.io/2.Basics/CLI%20Command%20Reference.html):
   Infrastructure-as-code policy checks with JSON, SARIF, JUnit, and CI exits.
 - [TFLint](https://github.com/terraform-linters/tflint): Terraform linting with
@@ -313,6 +349,12 @@ documented, and scripts can read the output without scraping a screen.
   files.
 - [Directus schema tooling](https://directus.com/docs/tutorials/migration/promoting-changes-between-environments-in-directus):
   Directus schema snapshot, diff, and apply between environments.
+- [DatoCMS CLI (`datocms`)](https://www.datocms.com/docs/cli/environment-migration-and-maintenance-commands):
+  Schema migrations, environment diffs, dry-runs, sandbox forks, promotion,
+  maintenance mode, and API-token auth for CI.
+- [Storyblok CLI (`storyblok`)](https://www.storyblok.com/docs/libraries/storyblok-cli):
+  Stories, assets, components, datasources, local JSON artifacts, migrations,
+  dry-runs, snapshots, rollback, and schema diffs.
 - [WP-CLI](https://developer.wordpress.org/cli/commands/): WordPress content,
   users, plugins, themes, options, cron, cache, and database operations. The
   `search-replace --dry-run` path is worth special attention.
@@ -378,8 +420,8 @@ documented, and scripts can read the output without scraping a screen.
 
 Gaps to research next: maintained CLIs for PagerDuty or Opsgenie incident work,
 HubSpot CRM data, Help Scout or Zendesk queues, ad platforms, analytics
-exports, product analytics, warehouse migrations, data lineage, marketplace
-operations, and niche CLIs people actually use with agents.
+exports, product analytics, data lineage, marketplace operations, and niche
+CLIs people actually use with agents.
 
 ## Contributing
 
