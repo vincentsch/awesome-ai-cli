@@ -28,6 +28,15 @@ A candidate usually does several of these things:
 A narrow CLI can belong when it covers a workflow that an agent should not
 handle through a browser.
 
+## Unofficial CLIs
+
+Unofficial does not mean out. Some SaaS products still have no first-party CLI,
+and a maintained community CLI can be the right option.
+
+It should be installable, documented, active enough to trust, clear about being
+unofficial, and honest about how credentials are stored or passed. If auth is
+unclear, the tool stays out.
+
 ## What Usually Does Not Belong
 
 - AI agent runtimes and chat tools.

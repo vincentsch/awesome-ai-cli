@@ -14,6 +14,9 @@ before a command changes state.
 This list leaves out AI agent apps, package managers, interactive-only TUIs,
 common shell tools, and browser automation.
 
+Unofficial CLIs are fine when the repo is maintained, the credential flow is
+documented, and scripts can read the output without scraping a screen.
+
 ## Contents
 
 - [Source Control, Reviews, And CI](#source-control-reviews-and-ci)
@@ -43,6 +46,12 @@ common shell tools, and browser automation.
 - [CircleCI CLI](https://circleci.com/docs/local-cli/): Config validation,
   reusable config packing, local job execution where supported, and CI setup
   checks before a YAML change is pushed.
+- [Buildkite CLI (`bk`)](https://buildkite.com/docs/platform/cli): Builds,
+  jobs, pipelines, annotations, artifacts, clusters, agents, and JSON output
+  for list or view commands.
+- [TeamCity CLI (`teamcity`)](https://www.jetbrains.com/help/teamcity/teamcity-cli.html):
+  Builds, queues, agents, logs, artifacts, remote agent terminals, and direct
+  TeamCity REST calls.
 - [GitHub Actions `act`](https://github.com/nektos/act): Local runs for many
   GitHub Actions jobs. It does not match GitHub-hosted runners exactly, but it
   catches a lot before hosted CI starts.
@@ -70,13 +79,27 @@ common shell tools, and browser automation.
 - [Hetzner Cloud CLI (`hcloud`)](https://github.com/hetznercloud/cli):
   Hetzner Cloud servers, networks, firewalls, volumes, load balancers, SSH
   keys, primary IPs, DNS zones, and project contexts.
+- [Linode CLI](https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-the-linode-cli):
+  Linode instances, Kubernetes, volumes, firewalls, images, domains, object
+  storage, and JSON output.
+- [Vultr CLI (`vultr-cli`)](https://github.com/vultr/vultr-cli): Instances,
+  Kubernetes, load balancers, DNS, firewalls, object storage, and text, JSON,
+  or YAML output.
 - [Render CLI](https://render.com/docs/cli): Services, deploys, logs, Postgres
   queries, Blueprint validation, non-interactive mode, and JSON or YAML output.
+- [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli): Apps,
+  releases, config vars, add-ons, logs, Postgres, pipelines, and JSON output
+  on many management commands.
+- [Railway CLI](https://docs.railway.com/cli): Projects, services, deploys,
+  logs, variables, shell sessions with service env, and CI tokens.
 - [Fly.io `flyctl`](https://fly.io/docs/flyctl/): App deploys, machines,
   volumes, secrets, releases, logs, and WireGuard.
 - [Fly.io Sprites CLI (`sprite`)](https://docs.sprites.dev/cli/commands/):
   Persistent Linux environments for agents, with command execution, console
   access, URL management, checkpoints, restore, and token setup for CI.
+- [Fastly CLI](https://www.fastly.com/documentation/reference/cli/): Fastly
+  Compute, VCL services, domains, backends, dictionaries, ACLs, packaging, and
+  deploys.
 - [Vercel CLI](https://vercel.com/docs/cli): Deployments, env vars, project
   linking, logs, aliases, and preview deployments.
 - [Netlify CLI](https://docs.netlify.com/cli/get-started/): Local dev, deploy
@@ -89,6 +112,14 @@ common shell tools, and browser automation.
 - [Laravel Forge CLI (`forge`)](https://laravel.com/forge/docs/cli): Forge
   servers, sites, deployments, environment variables, deployment logs, resource
   logs, resource status, restarts, SSH checks, and remote command execution.
+- [Coolify CLI (`coolify`)](https://github.com/coollabsio/coolify-cli):
+  Coolify cloud and self-hosted servers, projects, apps, databases, services,
+  contexts, JSON output, and token overrides.
+- [SST CLI (`sst`)](https://sst.dev/docs/reference/cli/): App deploys, stages,
+  secrets, logs, stage removal, and deployment diffs before a stage changes.
+- [Tailscale CLI](https://tailscale.com/docs/reference/tailscale-cli): Tailnet
+  status, peers, SSH, serve, funnel, file transfer, and JSON status for
+  automation. Funnel can expose a local service to the public internet.
 - [Nomad CLI](https://developer.hashicorp.com/nomad/commands/job/plan): Job
   planning, allocation diffs, and a plan index that protects an apply from
   racing cluster state.
@@ -124,6 +155,11 @@ common shell tools, and browser automation.
   branching, deploy requests, service tokens, and safer read-only SQL defaults.
 - [Turso CLI](https://docs.turso.tech/cli): SQLite databases, branches,
   replicas, tokens, orgs, and locations from scripts.
+- [Convex CLI](https://docs.convex.dev/cli/overview): Projects, deployments,
+  functions, data inspection, logs, env vars, imports, exports, and codegen.
+- [Upstash CLI](https://upstash.com/docs/agent-resources/cli): Redis, Vector,
+  Search, QStash, teams, JSON output by default, and dry-runs on destructive
+  commands.
 - [Databricks CLI](https://docs.databricks.com/aws/en/dev-tools/bundles/direct):
   Bundle validation, JSON deployment plans, and replay of an approved plan.
 - [Snowflake CLI](https://docs.snowflake.com/en/developer-guide/snowflake-cli/index):
@@ -139,9 +175,14 @@ common shell tools, and browser automation.
   tables, with plugin and rate-limit caveats.
 - [Dolt](https://www.dolthub.com/docs/cli-reference/cli/): SQL data with
   Git-like branches, commits, row diffs, merges, and rollback.
+- [dbmate](https://github.com/amacneil/dbmate): Database migrations, schema
+  dumps, migration status, rollback, and checks without tying the project to
+  one app framework.
 - [MinIO Client (`mc`)](https://docs.min.io/aistor/reference/cli/): S3-compatible
   object storage inspection, copy, mirror, and management. The mirror dry-run
   is the main reason to hand it to an agent.
+- [Backblaze B2 CLI (`b2`)](https://www.backblaze.com/docs/cloud-storage-command-line-tools):
+  B2 buckets, files, keys, replication, sync, removals, and JSON output.
 - [s5cmd](https://github.com/peak/s5cmd): High-volume S3 operations with
   command files, dry-runs, and structured logs.
 - [rclone](https://rclone.org/commands/rclone/): Copy, compare, check, and sync
@@ -187,21 +228,42 @@ common shell tools, and browser automation.
 - [1Password CLI (`op`)](https://developer.1password.com/docs/cli/): Secret
   references, vault items, service accounts, `op run`, and JSON output. Prefer
   injection over printing secrets.
+- [Bitwarden CLI (`bw`)](https://bitwarden.com/help/cli/): Vault items,
+  folders, collections, organizations, Send objects, JSON templates, `jq`
+  workflows, and scripted unlock sessions. Treat `bw serve` as local secret
+  exposure unless you control the machine.
 - [Vault CLI](https://developer.hashicorp.com/vault/docs/commands): Vault
   paths, policies, auth methods, leases, and JSON output. It belongs with
   narrow tokens.
 - [Infisical CLI](https://infisical.com/docs/cli/overview): Secret sync,
   injection, project and environment targeting, and CI auth.
+- [Doppler CLI](https://docs.doppler.com/docs/cli): Secrets, projects,
+  configs, audit logs, `doppler run`, secret downloads, per-command config,
+  and service token auth.
 - [SOPS](https://getsops.io/): Encrypted YAML, JSON, ENV, INI, and binary files
   with reviewable diffs.
+- [Gitleaks](https://github.com/gitleaks/gitleaks): Git history, worktrees,
+  files, and stdin secret scans with JSON, CSV, JUnit, and SARIF reports.
+- [TruffleHog](https://github.com/trufflesecurity/trufflehog): Git, GitHub,
+  GitLab, S3, Docker, filesystem, and CI secret scans with verification and
+  JSON output.
 - [Trivy](https://trivy.dev/): Vulnerability, misconfiguration, secret, SBOM,
   filesystem, repo, and image scans with JSON and SARIF output.
 - [Semgrep](https://github.com/semgrep/semgrep): Structural code search and
   security rules with parseable findings.
+- [Snyk CLI](https://docs.snyk.io/developer-tools/snyk-cli/snyk-cli/cli-commands-and-options-summary):
+  Dependency, code, container, IaC, license, and SBOM scans with JSON and SARIF
+  output.
 - [Syft](https://github.com/anchore/syft): SBOM generation for containers and
   filesystems in JSON, SPDX, and CycloneDX formats.
 - [Grype](https://github.com/anchore/grype): Vulnerability scans for images and
   SBOMs with JSON output and severity gates.
+- [Cosign](https://docs.sigstore.dev/quickstart/quickstart-cosign/):
+  Container image and blob signing, verification, attestations, and keyless
+  Sigstore workflows.
+- [OpenSSF Scorecard](https://github.com/ossf/scorecard): Repository
+  supply-chain checks for GitHub or local repos, with JSON output for policy
+  gates.
 - [Checkov](https://www.checkov.io/2.Basics/CLI%20Command%20Reference.html):
   Infrastructure-as-code policy checks with JSON, SARIF, JUnit, and CI exits.
 - [TFLint](https://github.com/terraform-linters/tflint): Terraform linting with
@@ -222,6 +284,12 @@ common shell tools, and browser automation.
 - [Schemathesis](https://schemathesis.readthedocs.io/en/stable/reference/cli/):
   Property-based tests from OpenAPI or GraphQL, with JUnit, VCR, HAR, and
   NDJSON reports. Filter mutating endpoints unless they are part of the test.
+- [Postman CLI](https://learning.postman.com/docs/postman-cli/postman-cli-overview/):
+  Collection runs, API tests, spec linting, monitors, Postman workspace sync,
+  and JSON, JUnit, or HTML reports.
+- [Newman](https://learning.postman.com/docs/reference/newman-cli/newman-built-in-reporters/):
+  Postman collection runs from local files or URLs with CLI, JSON, JUnit,
+  and progress reports.
 - [k6](https://grafana.com/docs/k6/latest/): Scriptable load tests with
   thresholds, summaries, and JSON or NDJSON result streams.
 - [Hurl](https://hurl.dev/docs/running-tests.html): Plain-text HTTP requests
@@ -260,12 +328,25 @@ common shell tools, and browser automation.
 
 ## Workspace, CRM, Email, And Messaging
 
+- [Slack CLI (`slack`)](https://docs.slack.dev/tools/slack-cli/): Slack apps,
+  manifests, triggers, workflows, datastores, app deploys, local run, and logs.
 - [Google Workspace CLI (`gws`)](https://github.com/googleworkspace/cli): Drive,
   Gmail, Calendar, Sheets, Docs, Chat, and Admin APIs with JSON-first output.
   It is pre-1.0 and community-run.
 - [CLI for Microsoft 365 (`m365`)](https://pnp.github.io/cli-microsoft365/):
   Microsoft 365, Entra ID, Teams, SharePoint, Planner, and Outlook automation
   with JSON output and JMESPath queries.
+- [Notion CLI (`ntn`)](https://developers.notion.com/cli/get-started/overview):
+  Notion auth, API requests, data sources, file uploads, and Notion Workers.
+- [Airtable MCP CLI (`airtable-mcp`)](https://github.com/Airtable/airtable-mcp-cli):
+  Airtable bases and records through Airtable's MCP server, with profiles, JSON
+  tool discovery, stdin JSON input, and changing server-side tool schemas.
+- [Linear CLI (`linear`)](https://github.com/schpet/linear-cli): Unofficial
+  Linear issues, teams, projects, milestones, documents, comments, attachments,
+  branches, and JSON output on query, list, and view commands.
+- [HubSpot CLI (`hs`)](https://developers.hubspot.com/docs/developer-tooling/local-development/hubspot-cli/reference):
+  HubSpot apps, CMS assets, developer projects, serverless functions, uploads,
+  downloads, and account auth.
 - [Salesforce CLI (`sf`)](https://developer.salesforce.com/docs/platform/salesforce-cli-reference/guide/cli_reference_project.html):
   Orgs, metadata, scratch environments, deploy validation, and JSON output.
 - [Twilio CLI](https://www.twilio.com/docs/twilio-cli/general-usage/output-formatting-and-filtering):
@@ -280,6 +361,9 @@ common shell tools, and browser automation.
   the terminal. Test error behavior on your setup before relying on it.
 - [Resend CLI](https://github.com/resend/resend-cli): Domains, API keys,
   contacts, broadcasts, emails, and webhooks with JSON mode outside a TTY.
+- [Postmark CLI (`postmark`)](https://github.com/ActiveCampaign/postmark-cli):
+  Transactional email sends, server lookup, and template pull or push for CI.
+  It is narrower than Resend.
 
 ## Payments, Commerce, And Finance
 
@@ -292,10 +376,10 @@ common shell tools, and browser automation.
 
 ## Still Looking For
 
-Gaps to research next: first-party or well-maintained CLIs for Linear, Notion,
-Airtable, HubSpot CRM administration, warehouse migrations, ad platforms,
-analytics exports, helpdesk queues, product analytics, data lineage, and
-marketplace operations.
+Gaps to research next: maintained CLIs for PagerDuty or Opsgenie incident work,
+HubSpot CRM data, Help Scout or Zendesk queues, ad platforms, analytics
+exports, product analytics, warehouse migrations, data lineage, marketplace
+operations, and niche CLIs people actually use with agents.
 
 ## Contributing
 

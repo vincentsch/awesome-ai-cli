@@ -30,6 +30,10 @@ A good candidate usually has several of these traits:
 - Its failures are clear enough for automation to branch on.
 - It has current docs and an install path a maintainer can check.
 
+Unofficial CLIs can fit. The repo should be active, the maintainer should not
+hide that it is unofficial, and auth should be documented enough for scripts
+and CI.
+
 ## What Does Not Fit
 
 - AI agent runtimes
