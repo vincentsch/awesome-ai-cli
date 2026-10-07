@@ -36,38 +36,37 @@ documented, and scripts can read the output without scraping a screen.
 
 ## Source Control, Reviews, And CI
 
-- [GitHub CLI (`gh`)](https://cli.github.com/): Issues, pull requests,
-  releases, Actions runs, repo settings, and GraphQL or REST calls. Many
-  commands support `--json` and `--jq`.
-- [GitLab CLI (`glab`)](https://docs.gitlab.com/cli/): GitLab issues, merge
-  requests, pipelines, releases, and API calls. `glab api` covers gaps in the
-  higher-level commands and returns JSON.
+- [GitHub CLI (`gh`)](https://cli.github.com/): Work with issues, pull requests,
+  releases and Actions runs. Query GitHub's REST or GraphQL API, with JSON
+  output and jq filters on many commands.
+- [GitLab CLI (`glab`)](https://docs.gitlab.com/cli/): Manage issues, merge
+  requests, pipelines and releases. Use `glab api` for other GitLab API calls
+  and JSON responses.
 - [Atlassian CLI (`acli`)](https://developer.atlassian.com/cloud/acli/reference/commands/):
-  Jira work items, boards, projects, sprints, and JQL queries from the
-  terminal.
-- [CircleCI CLI](https://circleci.com/docs/local-cli/): Config validation,
-  reusable config packing, local job execution where supported, and CI setup
-  checks before a YAML change is pushed.
-- [Buildkite CLI (`bk`)](https://buildkite.com/docs/platform/cli): Builds,
-  jobs, pipelines, annotations, artifacts, clusters, agents, and JSON output
-  for list or view commands.
+  Work with Jira items, boards, projects and sprints. Run JQL queries from
+  the terminal.
+- [CircleCI CLI](https://circleci.com/docs/local-cli/): Validate and pack
+  CircleCI config before pushing a change. Run supported jobs locally.
+- [Buildkite CLI (`bk`)](https://buildkite.com/docs/platform/cli): Manage builds,
+  pipelines and agents. Inspect jobs, annotations and artifacts, with JSON
+  output for list and view commands.
 - [TeamCity CLI (`teamcity`)](https://www.jetbrains.com/help/teamcity/teamcity-cli.html):
-  Builds, queues, agents, logs, artifacts, remote agent terminals, and direct
-  TeamCity REST calls.
-- [GitHub Actions `act`](https://github.com/nektos/act): Local runs for many
-  GitHub Actions jobs. It does not match GitHub-hosted runners exactly, but it
-  catches a lot before hosted CI starts.
-- [Sentry CLI](https://docs.sentry.io/cli/): Releases, commits, deploys,
-  source maps, debug files, and event lookup from scripts.
+  Inspect builds, queues, agents, logs and artifacts. Open remote agent
+  terminals or call TeamCity's REST API.
+- [GitHub Actions `act`](https://github.com/nektos/act): Run GitHub Actions
+  jobs locally before pushing. Local runs differ from GitHub-hosted runners.
+- [Sentry CLI](https://docs.sentry.io/cli/): Manage releases, commits and
+  deployments. Upload source maps and debug files, or look up events from
+  scripts.
 
 ## Infrastructure And Cloud
 
-- [Terraform](https://developer.hashicorp.com/terraform/cli): The familiar
-  plan and apply loop, with change review before infrastructure is touched.
-- [OpenTofu](https://opentofu.org/docs/cli/): Terraform-compatible
-  infrastructure commands with the same plan-first shape.
-- [Pulumi CLI](https://www.pulumi.com/docs/iac/cli/): Infrastructure previews,
-  diffs, stack outputs, and updates from programs written in normal languages.
+- [Terraform](https://developer.hashicorp.com/terraform/cli): Define
+  infrastructure in config files, review a plan and apply the changes.
+- [OpenTofu](https://opentofu.org/docs/cli/): Define infrastructure with
+  Terraform-compatible configuration. Review a plan before applying changes.
+- [Pulumi CLI](https://www.pulumi.com/docs/iac/cli/): Define infrastructure
+  in code, preview changes and update stacks. Inspect diffs and stack outputs.
 - [AWS CLI](https://aws.amazon.com/cli/): AWS resources with JSON output,
   profiles, regions, JMESPath queries, and IAM-based credential scoping.
 - [Azure CLI (`az`)](https://learn.microsoft.com/en-us/cli/azure/): Azure
