@@ -405,7 +405,7 @@ documented, and scripts can read the output without scraping a screen.
 - [notmuch](https://notmuchmail.org/doc/latest/man1/notmuch-search.html):
   Search, thread, tag, dump, and restore for a local mail corpus, with stable
   message and thread IDs.
-- [Himalaya](https://pimalaya.org/himalaya/): IMAP and Maildir operations from
+- [Himalaya](https://github.com/pimalaya/himalaya): IMAP and Maildir operations from
   the terminal. Test error behavior on your setup before relying on it.
 - [Resend CLI](https://github.com/resend/resend-cli): Domains, API keys,
   contacts, broadcasts, emails, and webhooks with JSON mode outside a TTY.
