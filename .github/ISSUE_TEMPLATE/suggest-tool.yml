@@ -1,0 +1,30 @@
+name: Suggest a CLI
+description: Suggest a command-line tool for the directory.
+title: 'Add: '
+body:
+  - type: input
+    id: project
+    attributes:
+      label: Tool name and official URL
+      placeholder: Tool name, https://...
+    validations:
+      required: true
+  - type: textarea
+    id: workflow
+    attributes:
+      label: What can an agent do with it?
+      description: Give one concrete workflow and an example command. Leave out credentials.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Documentation
+      description: Link to installation, authentication and output format docs. Include non-interactive or preview behavior where supported.
+    validations:
+      required: true
+  - type: textarea
+    id: caveats
+    attributes:
+      label: Caveats and connection to the project
+      description: Mention relevant limits. Tell us if you maintain or work on the tool.

@@ -5,6 +5,9 @@ more than a terminal command to belong here.
 
 Read [criteria.md](criteria.md) before proposing a tool.
 
+You can [suggest a CLI through an issue](https://github.com/vincentsch/awesome-ai-cli/issues/new?template=suggest-tool.yml)
+if you would rather not open a pull request.
+
 ## Pull Requests
 
 - Add one tool per pull request.
@@ -67,3 +70,14 @@ For a new tool, include links that show the relevant parts:
 
 If the evidence is weak, leave the tool out for now or add it to the README's
 `Still Looking For` section in plain English.
+
+## Link Maintenance
+
+The link check runs on Monday, Wednesday and Friday, and on Markdown changes.
+Its report is in the GitHub Actions job summary. HTTP 403 and 429 responses
+need manual review; they are accepted by the automated check because some
+documentation sites block bots or rate-limit requests.
+
+Check a reported URL before changing an entry. Follow the project's official
+documentation when a page moves. A single failed request does not establish
+that a project is abandoned.

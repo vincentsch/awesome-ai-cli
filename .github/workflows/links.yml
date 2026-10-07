@@ -1,0 +1,30 @@
+name: Check directory links
+
+on:
+  push:
+    branches: [main]
+    paths: ['*.md', '.github/workflows/links.yml']
+  pull_request:
+    paths: ['*.md', '.github/workflows/links.yml']
+  workflow_dispatch:
+  schedule:
+    - cron: '41 7 * * 1,3,5'
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Check project and documentation URLs
+        uses: lycheeverse/lychee-action@v2.9.0
+        with:
+          args: >-
+            --no-progress --exclude-mail --timeout 20 --max-retries 1
+            --max-concurrency 4 --accept '200..=299,403,429'
+            README.md CONTRIBUTING.md criteria.md
+          jobSummary: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
