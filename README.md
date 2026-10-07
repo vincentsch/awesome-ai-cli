@@ -215,6 +215,10 @@ documented, and scripts can read the output without scraping a screen.
 - [restic](https://restic.readthedocs.io/en/stable/075_scripting.html):
   Encrypted backups with addressable snapshots, checks, restores, and JSON
   output for scripting.
+- [Hyperconsciousness (`hc`)](https://github.com/louis030195/hyperconsciousness):
+  Encrypted, append-only notes and file storage with explicit store paths,
+  JSON file and blob inspection, and read-only offload plans before apply.
+  Developer alpha; JSON output is limited to selected commands.
 
 ## Queues, Streams, And Realtime
 
