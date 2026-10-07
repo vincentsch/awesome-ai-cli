@@ -22,7 +22,7 @@ jobs:
         uses: lycheeverse/lychee-action@v2.9.0
         with:
           args: >-
-            --no-progress --exclude-mail --timeout 20 --max-retries 1
+            --no-progress --timeout 20 --max-retries 1
             --max-concurrency 4 --accept '200..=299,403,429'
             README.md CONTRIBUTING.md criteria.md
           jobSummary: true
