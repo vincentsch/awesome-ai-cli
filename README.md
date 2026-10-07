@@ -2,6 +2,8 @@
 
 CLIs that play nicely with AI coding agents.
 
+Browse the directory at [awesomecli.com](https://www.awesomecli.com/).
+
 This list is for command-line tools that let an agent inspect or change a repo,
 service, dataset, product account, or infrastructure account without driving a
 browser. Tools should expose names, IDs, files, logs, diffs, plans, previews,
@@ -369,6 +371,11 @@ documented, and scripts can read the output without scraping a screen.
   backup, restart, logs, and diagnostics.
 
 ## Workspace, CRM, Email, And Messaging
+
+- [Asana CLI (`asana`)](https://github.com/vincentsch/asana-cli): Tasks,
+  projects, comments and other Asana resources with stable JSON output. Supported
+  writes accept `--dry-run`; previews can still read live state. Unofficial,
+  MIT-licensed and pre-1.0. Maintained by this list’s maintainer.
 
 - [Slack CLI (`slack`)](https://docs.slack.dev/tools/slack-cli/): Slack apps,
   manifests, triggers, workflows, datastores, app deploys, local run, and logs.
