@@ -1,11 +1,11 @@
 # Awesome AI CLI [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-CLIs that play nicely with AI coding agents.
+Command-line tools your coding agent can use from the shell.
 
 Browse the directory at [awesomecli.com](https://www.awesomecli.com/).
 
 Read [why we start with CLI tools](https://www.awesomecli.com/guides/cli-first-coding-agents/),
-or try the [GitHub CLI review and short video](https://www.awesomecli.com/guides/github-cli-coding-agents/).
+or try the [GitHub CLI review and video tutorial](https://www.awesomecli.com/guides/github-cli-coding-agents/).
 There are also [usage guides](https://www.awesomecli.com/guides/) for tools in the directory.
 
 This list is for command-line tools that let an agent inspect or change a repo,

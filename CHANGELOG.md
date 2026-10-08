@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-08
+
+- Updated the GitHub CLI tutorial link to cover installation, login, issue reads
+  and saving JSON. Clarified the directory introduction.
+
 ## 2026-10-07
 
 - Replaced the broken Himalaya project URL with its official repository.
