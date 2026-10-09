@@ -309,6 +309,10 @@ documented, and scripts can read the output without scraping a screen.
   Infrastructure-as-code policy checks with JSON, SARIF, JUnit, and CI exits.
 - [TFLint](https://github.com/terraform-linters/tflint): Terraform linting with
   provider-aware rules before a full plan.
+- [REA](https://github.com/morluto/rea): Inspect shipped binaries and
+  JavaScript/Electron apps with JSON evidence, source locations, and explicit
+  unknowns. Deep native analysis needs separately installed Hopper, Ghidra,
+  or IDA; annotation and runtime commands can write metadata or start processes.
 
 ## API Contracts, Testing, And Replay
 
