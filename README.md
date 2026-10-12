@@ -37,6 +37,9 @@ documented, and scripts can read the output without scraping a screen.
 - [Workspace, CRM, Email, And Messaging](#workspace-crm-email-and-messaging)
 - [Payments, Commerce, And Finance](#payments-commerce-and-finance)
 - [Still Looking For](#still-looking-for)
+- [Contributing](#contributing)
+- [Maintainer](#maintainer)
+- [License](#license)
 
 ## Source Control, Reviews, And CI
 
