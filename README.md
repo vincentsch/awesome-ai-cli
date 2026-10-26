@@ -378,11 +378,10 @@ documented, and scripts can read the output without scraping a screen.
 
 ## Workspace, CRM, Email, And Messaging
 
-- [Asana CLI (`asana`)](https://github.com/vincentsch/asana-cli): Tasks,
-  projects, comments and other Asana resources with stable JSON output. Supported
-  writes accept `--dry-run`; previews can still read live state. Unofficial,
-  MIT-licensed and pre-1.0. Maintained by this list’s maintainer.
-
+- [Asana CLI (`asana`)](https://github.com/vincentsch/asana-cli): Unofficial
+  Asana tasks, projects, sections, comments, and custom fields with stable JSON
+  output, `--dry-run` previews for writes, and `--confirm` for deletes. Pre-1.0
+  and made by this list’s maintainer.
 - [Slack CLI (`slack`)](https://docs.slack.dev/tools/slack-cli/): Slack apps,
   manifests, triggers, workflows, datastores, app deploys, local run, and logs.
 - [Google Workspace CLI (`gws`)](https://github.com/googleworkspace/cli): Drive,
