@@ -378,6 +378,11 @@ documented, and scripts can read the output without scraping a screen.
 
 ## Workspace, CRM, Email, And Messaging
 
+- [ExtraBrain CLI (`extrabrain`)](https://github.com/ExtraBrainApp/ExtraBrain-cli):
+  Import, search, and export reference documents and read or export meeting
+  sessions by ID with JSON output and revision checks for document deletion.
+  Requires the ExtraBrain desktop app running locally on macOS or Windows;
+  some profile features require Pro.
 - [Asana CLI (`asana`)](https://github.com/vincentsch/asana-cli): Unofficial
   Asana tasks, projects, sections, comments, and custom fields with stable JSON
   output, `--dry-run` previews for writes, and `--confirm` for deletes. Pre-1.0
