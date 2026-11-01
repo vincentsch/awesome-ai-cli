@@ -156,6 +156,10 @@ documented, and scripts can read the output without scraping a screen.
 - [Cilium CLI](https://docs.cilium.io/en/stable/gettingstarted/k8s-install-default/):
   Cilium install checks, connectivity tests, and network troubleshooting for
   Kubernetes clusters.
+- [Flisk](https://github.com/flisk-sh/flisk): Detect the app in a directory,
+  render the local Compose and Tilt environment around it, and bring the whole
+  stack up in one command, so an agent does not hand-edit Dockerfiles or
+  Tiltfiles. Caveat: local development only; it manages no cloud resources.
 
 ## Databases, Data, And Storage
 
