@@ -375,6 +375,10 @@ documented, and scripts can read the output without scraping a screen.
   extensions, functions, deploys, and local previews for Shopify projects.
 - [Ghost CLI](https://docs.ghost.org/ghost-cli): Ghost install, upgrade,
   backup, restart, logs, and diagnostics.
+- [HoneyVid CLI (`honeyvid`)](https://github.com/HoneyVid/cli): AI video and
+  image jobs: templates, quotes, create/generate with a credit ceiling and an
+  idempotency key, job status, downloads, global `--json` and `schema`. Caveat:
+  `create`, `generate` and `retry` spend paid credits.
 
 ## Workspace, CRM, Email, And Messaging
 
