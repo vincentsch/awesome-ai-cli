@@ -120,6 +120,12 @@ documented, and scripts can read the output without scraping a screen.
   compilation.
 - [Firebase CLI](https://firebase.google.com/docs/cli): Firebase deploys,
   emulators, project config, functions, Firestore indexes, and CI auth.
+- [Privy CLI (`privy`)](https://privy-cli.awesamarth.dev/): Unofficial
+  management of Privy accounts and apps: login methods, users, wallets,
+  policies, webhooks, and analytics, with JSON output, `--diff` previews
+  against live config, and exact-name confirmation for deletes. It calls the
+  dashboard's undocumented endpoints with a dashboard session, so dashboard
+  changes can break commands.
 - [LaunchDarkly CLI (`ldcli`)](https://launchdarkly.com/docs/home/getting-started/ldcli-commands):
   Flags, projects, environments, members, segments, experiments, metrics,
   JSON responses, file-based request bodies, and a local flag dev server.
